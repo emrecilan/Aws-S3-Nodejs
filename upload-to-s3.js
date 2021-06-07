@@ -9,8 +9,8 @@ const s3 = new AWS.S3({
   });
 
 // call S3 to retrieve upload file to specified bucket
-var uploadParams = {Bucket: process.argv[2], Key: 'aes_keys/test/randomKey.enc', Body: ''};
-var file = process.argv[3];
+var uploadParams = {Bucket: process.argv[2], Key: process.argv[4], Body: ''};
+var file = process.argv[4];
 
 // Configure the file stream and obtain the upload parameters
 var fs = require('fs');

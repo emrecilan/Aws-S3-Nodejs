@@ -18,14 +18,14 @@ const downloadFile = () => {
     fs.readFile(fileName, (err, data) => {
        if (err) throw err;
        const params = {
-           Bucket: 'entranet-1', // pass your bucket name
-           Key: "aes_keys/test/" + fileName, // file will be saved as testBucket/contacts.csv
+           Bucket: BUCKET, // pass your bucket name
+           Key: KEY + fileName, // file will be saved as testBucket/contacts.csv
        };
        s3.getObject(params, function(err, data) {
         if (err) {
             console.log(err)
         }
-        fs.writeFileSync('./randomKey2.enc', data.Body)
+        fs.writeFileSync('./file.txt', data.Body)
         console.log('file downloaded successfully')
         });
     });
