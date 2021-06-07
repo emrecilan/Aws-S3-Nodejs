@@ -4,8 +4,8 @@ AWS.config.update({region: 'eu-west-1'});
 
 // Create S3 service object
 const s3 = new AWS.S3({
-    accessKeyId: "AKIA33UJHTCH76MRVZAO",
-    secretAccessKey: "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"
+    accessKeyId: ACCESS_KEY_ID,
+    secretAccessKey: SECRET_ACCESS_KEY
   });
 
 // call S3 to retrieve upload file to specified bucket

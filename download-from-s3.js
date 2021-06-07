@@ -9,8 +9,8 @@ const BUCKET_NAME = "ENTER BUCKET NAME HERE"
 */
 
 var s3 = new AWS.S3({
-    accessKeyId: "AKIA33UJHTCH76MRVZAO",
-    secretAccessKey: "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",
+    accessKeyId: ACCESS_KEY_ID ,
+    secretAccessKey: SECRET_ACCESS_KEY,
 })
 
 const fileName = 'randomKey.enc';
