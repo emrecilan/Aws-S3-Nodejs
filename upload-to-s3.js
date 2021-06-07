@@ -1,6 +1,6 @@
 var AWS = require('aws-sdk');
 // Set the Region 
-AWS.config.update({region: 'eu-west-1'});
+AWS.config.update({region: REGİON});
 
 // Create S3 service object
 const s3 = new AWS.S3({
